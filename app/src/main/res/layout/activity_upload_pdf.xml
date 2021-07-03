@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Admin.uploadPdfActivity">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/select_image_cardview_uploadpdfactivity"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_margin="70dp"
+        android:elevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/select_pdf_imageview_uploadpdfactivity"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="15dp"
+                android:background="@color/red"
+                android:src="@drawable/ebook_pdf"/>
+
+            <!--            <view-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginTop="10dp"/>-->
+            <TextView
+                android:id="@+id/select_pdf_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Select Pdf"
+                android:textColor="@color/textColor"
+                android:textSize="20dp"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/show_pdf_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No file selected"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="20dp"/>
+
+
+
+
+
+    <EditText
+        android:id="@+id/pdf_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:hint="Pdf title.. ...."
+        android:background="@drawable/edit_text"
+        android:padding="16dp"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"/>
+
+
+
+    <Button
+        android:id="@+id/upload_btn_uploadpdfactivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="Upload"
+        android:background="@drawable/buttons"
+        android:padding="16dp"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"/>
+
+
+
+
+</LinearLayout>

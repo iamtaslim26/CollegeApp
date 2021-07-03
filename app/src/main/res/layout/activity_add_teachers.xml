@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Faculty.AddTeachersActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image_teacher"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:civ_border_width="2dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/person"
+            android:background="@color/colorAccent"
+            app:civ_border_color="#FF000000"/>
+
+
+        <EditText
+            android:id="@+id/name_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:hint="Name. . ."
+            android:background="@drawable/edit_text"
+            android:padding="16dp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+
+        <EditText
+            android:id="@+id/email_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:hint="Email. . ."
+            android:background="@drawable/edit_text"
+            android:padding="16dp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+
+        <EditText
+            android:id="@+id/post_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:hint="Post. . ."
+            android:background="@drawable/edit_text"
+            android:padding="16dp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+
+        <Spinner
+            android:id="@+id/teacher_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/red"
+            android:padding="20dp"
+            android:gravity="center"
+            android:layout_marginVertical="16dp"/>
+
+
+        <Button
+            android:id="@+id/upload_btn_teachers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:text="Add Teacher"
+            android:background="@drawable/buttons"
+            android:padding="16dp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

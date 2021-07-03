@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1092613141455",
+    "project_id": "colllegeapp",
+    "storage_bucket": "colllegeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092613141455:android:6b4875cf3ac7fdbc2a98ba",
+        "android_client_info": {
+          "package_name": "com.kgec.collegeadminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092613141455-1bn5hap3rt97uv5ahsscvjdoe5f0scvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMVsnynHT-BOnWYmT_Rvuul5F3qV40_J4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092613141455-1bn5hap3rt97uv5ahsscvjdoe5f0scvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

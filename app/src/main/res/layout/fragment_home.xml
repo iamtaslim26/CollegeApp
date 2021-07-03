@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.smarteist.autoimageslider.SliderLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentTop="true"
+                android:id="@+id/imageSlider"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalyani Government Engineering College"
+                android:gravity="center_horizontal"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:layout_marginTop="36dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalyani Government Engineering College (KGEC) is a prestigious engineering college established in 1995. It is affiliated to the Maulana Abul Kalam University of Technology and has been approved by AICTE. The college offers B.Tech at the UG level, M.Tech and MCA programs at the PG level. It has a highly experienced team of faculty members to deliver quality technical education. A good number of reputed companies recruit students from this institute with handsome packages."
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textStyle="italic"
+                android:layout_marginLeft="5dp"
+                android:textSize="17dp"
+                android:layout_marginTop="36dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:background="@color/textColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="36dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Departments"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:layout_marginTop="36dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Computer Science"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/red"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:layout_marginTop="36dp"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Information Technology"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/red"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:layout_marginTop="36dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Electrical Engineering"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/red"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:layout_marginTop="36dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mechanical Engineering"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/red"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:layout_marginTop="36dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ece Department"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/red"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:layout_marginTop="36dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Physics"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/red"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:layout_marginTop="36dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chemistry"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/red"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:layout_marginTop="36dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mathematics"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/red"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:layout_marginTop="36dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MCA"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/red"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:layout_marginTop="36dp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/textColor"
+                android:layout_marginTop="36dp">
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contacts"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:layout_marginTop="36dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="KALYANI GOVERNMENT ENGINEERING COLLEGE, NADIA, KALYANI, West Bengal, 741235"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:layout_marginTop="36dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Contact no: 33 - 25821309"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:layout_marginTop="36dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Email: principalkgec@gmail.com"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:layout_marginTop="36dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Fax : 25821309"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:layout_marginTop="36dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Website: 	www.kgec.edu.in"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:layout_marginTop="36dp"/>
+
+
+                <ImageView
+                    android:id="@+id/map"
+                    android:src="@drawable/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"/>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

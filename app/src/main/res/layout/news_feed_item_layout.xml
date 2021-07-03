@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/news_feed_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/person"
+                android:background="@drawable/red"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:id="@+id/news_feed_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to KGEC APP"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/news_feed_delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttons"
+                android:layout_margin="10dp"
+                android:text="delete"/>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/news_feed_title_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write the Title"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="10dp"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/news_feed_show_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
