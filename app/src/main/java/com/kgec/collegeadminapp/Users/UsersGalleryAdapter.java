@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.kgec.collegeadminapp.R;
 import com.squareup.picasso.Picasso;
 
@@ -38,6 +39,7 @@ public class UsersGalleryAdapter extends RecyclerView.Adapter<UsersGalleryAdapte
         final UsersGallery item=list.get(position);
 
         Picasso.get().load(item.getImageUrl()).into(holder.imageView);
+       // Glide.with(mContext).load(list.get(position)).into(holder.imageView);
     }
 
     @Override

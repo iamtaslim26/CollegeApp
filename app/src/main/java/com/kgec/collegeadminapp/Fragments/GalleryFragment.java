@@ -5,9 +5,12 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +25,7 @@ import com.kgec.collegeadminapp.Users.UsersGallery;
 import com.kgec.collegeadminapp.Users.UsersGalleryAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GalleryFragment extends Fragment {
 
@@ -32,9 +36,10 @@ public class GalleryFragment extends Fragment {
     private RecyclerView independeceday_reyclerview;
     private CardView convocation,others,independence;
 
-    private ArrayList<UsersGallery>list;
+
     private DatabaseReference databaseReference;
-    private UsersGalleryAdapter adapter;
+    private UsersGalleryAdapter usersGalleryAdapter;
+
 
 
 
@@ -58,31 +63,37 @@ public class GalleryFragment extends Fragment {
         others=gallery_view.findViewById(R.id.others_card);
         independence=gallery_view.findViewById(R.id.ind_card);
 
-        covocation_reyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
-        others_reyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+        covocation_reyclerview.setLayoutManager(new GridLayoutManager(getContext(),3));
+
         independeceday_reyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        databaseReference= FirebaseDatabase.getInstance().getReference().child("Gallery");
+        covocation_reyclerview.setHasFixedSize(true);
+        others_reyclerview.setHasFixedSize(true);
+        independeceday_reyclerview.setHasFixedSize(true);
 
-        list=new ArrayList<>();
+        databaseReference= FirebaseDatabase.getInstance().getReference().child("Gallery");
 
 
         ShowConvocation();
 
+        ShowOthersEvents();
+
+        ShowIndependenceEvent();
+
         return gallery_view;
     }
 
-    private void ShowConvocation() {
+    private void ShowIndependenceEvent() {
 
-        databaseReference.child("Convocation").addValueEventListener(new ValueEventListener() {
+        List<UsersGallery>list=new ArrayList<>();
+
+        databaseReference.child("Independence day").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 if (dataSnapshot.exists()){
 
-                    convocation.setVisibility(View.VISIBLE);
-
-                   // list.clear();
+                    independence.setVisibility(View.VISIBLE);
 
                     for (DataSnapshot snapshot:dataSnapshot.getChildren()){
 
@@ -91,8 +102,9 @@ public class GalleryFragment extends Fragment {
                     }
                 }
 
-                adapter=new UsersGalleryAdapter(getContext(),list);
-                covocation_reyclerview.setAdapter(adapter);
+                usersGalleryAdapter=new UsersGalleryAdapter(getContext(),list);
+                independeceday_reyclerview.setLayoutManager(new GridLayoutManager(getContext(),3));
+                independeceday_reyclerview.setAdapter(usersGalleryAdapter);
             }
 
             @Override
@@ -100,6 +112,68 @@ public class GalleryFragment extends Fragment {
 
             }
         });
+    }
 
+    private void ShowOthersEvents() {
+
+        List<UsersGallery>list=new ArrayList<>();
+
+        databaseReference.child("Other Events").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if (dataSnapshot.exists()){
+
+                    others.setVisibility(View.VISIBLE);
+                    for (DataSnapshot snapshot:dataSnapshot.getChildren()){
+
+                        UsersGallery usersGallery=snapshot.getValue(UsersGallery.class);
+                        list.add(usersGallery);
+                    }
+                }
+
+                usersGalleryAdapter=new UsersGalleryAdapter(getContext(),list);
+                others_reyclerview.setLayoutManager(new GridLayoutManager(getContext(),3));
+                others_reyclerview.setAdapter(usersGalleryAdapter);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void ShowConvocation() {
+
+        List<UsersGallery>list=new ArrayList<>();
+
+
+        databaseReference.child("Convocation").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if (dataSnapshot.exists()){
+
+                    convocation.setVisibility(View.VISIBLE);
+                    for (DataSnapshot snapshot:dataSnapshot.getChildren()){
+
+                        UsersGallery usersGallery=snapshot.getValue(UsersGallery.class);
+                        list.add(usersGallery);
+                    }
+                }
+
+                usersGalleryAdapter=new UsersGalleryAdapter(getContext(),list);
+                covocation_reyclerview.setLayoutManager(new GridLayoutManager(getContext(),3));
+                covocation_reyclerview.setAdapter(usersGalleryAdapter);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

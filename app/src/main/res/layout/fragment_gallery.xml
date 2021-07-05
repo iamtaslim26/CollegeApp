@@ -39,7 +39,6 @@
                    android:id="@+id/convocation_recyclerview"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:visibility="gone"
                    android:layout_marginTop="10dp"/>
 
 
@@ -71,6 +70,7 @@
                    android:text="Others"
                    android:layout_gravity="center_horizontal"
                    android:textColor="@color/red"
+
                    android:textStyle="bold"
                    android:textSize="25dp"
                    android:layout_marginTop="36dp"/>

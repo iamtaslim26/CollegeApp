@@ -110,6 +110,10 @@ public class UploadImageActivity extends AppCompatActivity {
 
             Toast.makeText(this, "please upload the image ", Toast.LENGTH_SHORT).show();
         }
+        else if (category.equals("Select Category")){
+
+            Toast.makeText(this, "Please select the category.....", Toast.LENGTH_SHORT).show();
+        }
         else {
 
             loadingbar.setMessage("Authenticating. . . . ");
@@ -165,7 +169,7 @@ public class UploadImageActivity extends AppCompatActivity {
         map.put("ImageUrl",downloadUrl);
         map.put("id",uniqueKey);
 
-        galleryRef.child(uniqueKey).child(category).updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+        galleryRef.child(category).child(uniqueKey).updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
 

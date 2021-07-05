@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/branch_item_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_computer"/>
+
+            <TextView
+                android:id="@+id/branch_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/branch_item_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalyani Government Engineering College (KGEC) is a prestigious engineering college established in 1995. It is affiliated to the Maulana Abul Kalam University of Technology and has been approved by AICTE. The college offers B.Tech at the UG level, M.Tech and MCA programs at the PG level. It has a highly experienced team of faculty members to deliver quality technical education. A good number of reputed companies recruit students from this institute with handsome packages."
+            android:layout_gravity="center"
+            android:textColor="@color/pink"
+            android:textStyle="italic"
+            android:layout_marginLeft="5dp"
+            android:textSize="17dp"
+            android:layout_marginTop="36dp"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

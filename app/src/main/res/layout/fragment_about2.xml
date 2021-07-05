@@ -1,12 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.AboutFragment">
-    <TextView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="About Fragment"/>
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/college_image"
+            android:layout_width="match_parent"
+            android:background="@drawable/kgec"
+            android:layout_margin="10dp"
+            android:layout_height="220dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalyani Government Engineering College (KGEC) is a prestigious engineering college established in 1995. It is affiliated to the Maulana Abul Kalam University of Technology and has been approved by AICTE. The college offers B.Tech at the UG level, M.Tech and MCA programs at the PG level. It has a highly experienced team of faculty members to deliver quality technical education. A good number of reputed companies recruit students from this institute with handsome packages."
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:layout_marginLeft="5dp"
+            android:textSize="17dp"
+            android:layout_marginTop="36dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Green Environment"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/green1"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="36dp"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Branch"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="30dp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="center"
+            android:layout_marginBottom="10dp"
+            android:clipToPadding="false"
+           />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
