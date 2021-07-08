@@ -15,6 +15,7 @@ import com.kgec.collegeadminapp.Fragments.FacultyFragment;
 import com.kgec.collegeadminapp.Fragments.GalleryFragment;
 import com.kgec.collegeadminapp.Fragments.HomeFragment;
 import com.kgec.collegeadminapp.Fragments.NoticeFragment;
+import com.kgec.collegeadminapp.Users.EbooksActivity;
 
 
 import androidx.annotation.NonNull;
@@ -89,7 +90,7 @@ public class UserMainActivity extends AppCompatActivity {
                 break;
 
             case R.id.navigation_Ebooks:
-                Toast.makeText(this, "EBooks", Toast.LENGTH_SHORT).show();
+               startActivity(new Intent(getApplicationContext(), EbooksActivity.class));
                 break;
 
             case R.id.navigation_Themes:
