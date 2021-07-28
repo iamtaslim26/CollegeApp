@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.kgec.collegeadminapp.Admin.DashBoardActivity;
+import com.kgec.collegeadminapp.Admin.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getApplicationContext(), DashBoardActivity.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
 

@@ -1,6 +1,7 @@
 package com.kgec.collegeadminapp.Users;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,17 @@ public class UsersGalleryAdapter extends RecyclerView.Adapter<UsersGalleryAdapte
 
         Picasso.get().load(item.getImageUrl()).into(holder.imageView);
        // Glide.with(mContext).load(list.get(position)).into(holder.imageView);
+
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent=new Intent(mContext,FullImageActivity.class);
+                intent.putExtra("image",item.getImageUrl());
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override

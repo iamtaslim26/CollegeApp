@@ -11,9 +11,9 @@
         android:icon="@drawable/notice"
         android:title="Ebooks" />
     <item
-        android:id="@+id/navigation_Themes"
-        android:icon="@drawable/faculty"
-        android:title="Themes" />
+        android:id="@+id/navigation_hostels"
+        android:icon="@drawable/map"
+        android:title="Hostels" />
 
     <item
         android:id="@+id/navigation_Website"

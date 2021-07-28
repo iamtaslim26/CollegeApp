@@ -43,9 +43,8 @@ public class UserMainActivity extends AppCompatActivity {
         mToolbar=findViewById(R.id.main_app_bar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Home");
-
-       navView = findViewById(R.id.nav_view);
-     navView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+        navView = findViewById(R.id.nav_view);
+        navView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
 
        navigationView=findViewById(R.id.navigation_view);
        drawerLayout=findViewById(R.id.drawer_layout);
@@ -93,8 +92,8 @@ public class UserMainActivity extends AppCompatActivity {
                startActivity(new Intent(getApplicationContext(), EbooksActivity.class));
                 break;
 
-            case R.id.navigation_Themes:
-                Toast.makeText(this, "Themes", Toast.LENGTH_SHORT).show();
+            case R.id.navigation_hostels:
+                Toast.makeText(this, "Hostels", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.navigation_Website:

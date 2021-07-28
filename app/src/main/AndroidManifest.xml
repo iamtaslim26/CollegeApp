@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeAdminApp">
-        <activity android:name=".Users.PdfViewerActivity"></activity>
+        <activity android:name=".Users.FullImageActivity"></activity>
+        <activity android:name=".Users.HostelActivity" />
+        <activity android:name=".Admin.LoginActivity" />
+        <activity android:name=".Users.PdfViewerActivity" />
         <activity android:name=".Users.EbooksActivity" />
         <activity android:name=".Users.ShowTeachersDetailsActivity" />
         <activity android:name=".MainActivity2" />
